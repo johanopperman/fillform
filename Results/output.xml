@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20181213 09:15:58.748" generator="Robot 3.1b1 (Python 2.7.15 on win32)">
+<suite source="C:\Development\Robot-scripts\Compodium\Tests\Compodium.robot" id="s1" name="Compodium">
+<test id="s1-t1" name="Should be able to Capture a form">
+<kw type="setup" name="Begin Web Test" library="CommonWeb">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20181213 09:15:59.061" level="INFO">Opening browser 'Chrome' to base url 'http://compendiumdev.co.uk/selenium/basic_html_form.html'.</msg>
+<status status="PASS" endtime="20181213 09:16:04.312" starttime="20181213 09:15:59.061"></status>
+</kw>
+<status status="PASS" endtime="20181213 09:16:04.312" starttime="20181213 09:15:59.061"></status>
+</kw>
+<kw name="Fill out the form" library="CompodiumApp">
+<kw name="Start to fill out the form" library="Captureform">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="HTMLFormElements"]/table/tbody/tr[1]/td/input</arg>
+<arg>Jack</arg>
+</arguments>
+<msg timestamp="20181213 09:16:04.314" level="INFO">Typing text 'Jack' into text field 'xpath=//*[@id="HTMLFormElements"]/table/tbody/tr[1]/td/input'.</msg>
+<status status="PASS" endtime="20181213 09:16:04.407" starttime="20181213 09:16:04.314"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20181213 09:16:07.408" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181213 09:16:07.408" starttime="20181213 09:16:04.407"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="HTMLFormElements"]/table/tbody/tr[2]/td/input</arg>
+<arg>12345</arg>
+</arguments>
+<msg timestamp="20181213 09:16:07.408" level="INFO">Typing text '12345' into text field 'xpath=//*[@id="HTMLFormElements"]/table/tbody/tr[2]/td/input'.</msg>
+<status status="PASS" endtime="20181213 09:16:07.483" starttime="20181213 09:16:07.408"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20181213 09:16:10.484" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181213 09:16:10.484" starttime="20181213 09:16:07.483"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="HTMLFormElements"]/table/tbody/tr[3]/td/textarea</arg>
+<arg>This is my comments</arg>
+</arguments>
+<msg timestamp="20181213 09:16:10.484" level="INFO">Typing text 'This is my comments' into text field 'xpath=//*[@id="HTMLFormElements"]/table/tbody/tr[3]/td/textarea'.</msg>
+<status status="PASS" endtime="20181213 09:16:10.583" starttime="20181213 09:16:10.484"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20181213 09:16:13.584" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181213 09:16:13.584" starttime="20181213 09:16:10.584"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@value="cb1"]</arg>
+</arguments>
+<msg timestamp="20181213 09:16:13.584" level="INFO">Clicking element 'xpath=//input[@value="cb1"]'.</msg>
+<status status="PASS" endtime="20181213 09:16:13.641" starttime="20181213 09:16:13.584"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20181213 09:16:16.642" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181213 09:16:16.642" starttime="20181213 09:16:13.642"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//input[@name="radioval"])[2]</arg>
+</arguments>
+<msg timestamp="20181213 09:16:16.642" level="INFO">Clicking element 'xpath=(//input[@name="radioval"])[2]'.</msg>
+<status status="PASS" endtime="20181213 09:16:16.701" starttime="20181213 09:16:16.642"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20181213 09:16:19.701" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181213 09:16:19.701" starttime="20181213 09:16:16.701"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>xpath=//select[@name="multipleselect[]"]</arg>
+<arg>ms3</arg>
+</arguments>
+<msg timestamp="20181213 09:16:19.701" level="INFO">Selecting options from selection list 'xpath=//select[@name="multipleselect[]"]' by value ms3.</msg>
+<status status="PASS" endtime="20181213 09:16:19.785" starttime="20181213 09:16:19.701"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20181213 09:16:22.786" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181213 09:16:22.786" starttime="20181213 09:16:19.785"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>xpath=//select[@name="dropdown"]</arg>
+<arg>dd5</arg>
+</arguments>
+<msg timestamp="20181213 09:16:22.787" level="INFO">Selecting options from selection list 'xpath=//select[@name="dropdown"]' by value dd5.</msg>
+<status status="PASS" endtime="20181213 09:16:22.862" starttime="20181213 09:16:22.786"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="HTMLFormElements"]/table/tbody/tr[9]/td/input[2]</arg>
+</arguments>
+<msg timestamp="20181213 09:16:22.862" level="INFO">Clicking button 'xpath=//*[@id="HTMLFormElements"]/table/tbody/tr[9]/td/input[2]'.</msg>
+<status status="PASS" endtime="20181213 09:16:23.350" starttime="20181213 09:16:22.862"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20181213 09:16:26.350" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181213 09:16:26.350" starttime="20181213 09:16:23.350"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Jack</arg>
+</arguments>
+<msg timestamp="20181213 09:16:26.369" level="INFO">Current page contains text 'Jack'.</msg>
+<status status="PASS" endtime="20181213 09:16:26.369" starttime="20181213 09:16:26.350"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>12345</arg>
+</arguments>
+<msg timestamp="20181213 09:16:26.385" level="INFO">Current page contains text '12345'.</msg>
+<status status="PASS" endtime="20181213 09:16:26.385" starttime="20181213 09:16:26.370"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>This is my comments</arg>
+</arguments>
+<msg timestamp="20181213 09:16:26.401" level="INFO">Current page contains text 'This is my comments'.</msg>
+<status status="PASS" endtime="20181213 09:16:26.402" starttime="20181213 09:16:26.385"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>cb1</arg>
+</arguments>
+<msg timestamp="20181213 09:16:26.417" level="INFO">Current page contains text 'cb1'.</msg>
+<status status="PASS" endtime="20181213 09:16:26.417" starttime="20181213 09:16:26.402"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>dd5</arg>
+</arguments>
+<msg timestamp="20181213 09:16:26.435" level="INFO">Current page contains text 'dd5'.</msg>
+<status status="PASS" endtime="20181213 09:16:26.435" starttime="20181213 09:16:26.417"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181213 09:16:26.674" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20181213 09:16:26.674" starttime="20181213 09:16:26.435"></status>
+</kw>
+<status status="PASS" endtime="20181213 09:16:26.674" starttime="20181213 09:16:04.314"></status>
+</kw>
+<status status="PASS" endtime="20181213 09:16:26.674" starttime="20181213 09:16:04.313"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="CommonWeb">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20181213 09:16:29.884" starttime="20181213 09:16:26.675"></status>
+</kw>
+<status status="PASS" endtime="20181213 09:16:29.884" starttime="20181213 09:16:26.675"></status>
+</kw>
+<doc>Fill out form</doc>
+<tags>
+<tag>Fill form</tag>
+</tags>
+<status status="PASS" endtime="20181213 09:16:29.885" critical="yes" starttime="20181213 09:15:59.059"></status>
+</test>
+<doc>Testing Compodium</doc>
+<status status="PASS" endtime="20181213 09:16:29.888" starttime="20181213 09:15:58.753"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Fill form</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Compodium" pass="1">Compodium</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
